@@ -6,7 +6,7 @@ export default function Navbar() {
   const inputId = useId()
   const { isLoggedIn, login, logout } = useUser();
   return (
-    <nav className='grid grid-cols-3 justify-between px-24 py-4 bg-red-400 items-center'>
+    <nav className='grid grid-cols-3 justify-between px-24 py-4 bg-gray-800 items-center'>
       <ul>
         <li className='flex items-center justify-center'>
           <Link to='/' className='text-[#F2F4FF] hover:text-[#565f93] active:text-[#1d2342]'>Home</Link>
@@ -46,3 +46,4 @@ export default function Navbar() {
     </nav>
   )
 }
+

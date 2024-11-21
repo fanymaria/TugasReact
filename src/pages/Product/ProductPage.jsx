@@ -10,12 +10,12 @@ const RadioButtonOpts = [
     value: 'all'
   },
   {
-    label: 'Cemilan\ Manis',
-    value: 'Cemilan\ Manis'
+    label: 'Alas\ Sepatu',
+    value: 'Alas\ Sepatu'
   },
   {
-    label: 'Cemilan\ Pedas',
-    value: 'Cemilan\ Pedas'
+    label: 'Alas\ Sendal',
+    value: 'Alas\ Sendal'
   },
 ]
 export default function ProductPage() {

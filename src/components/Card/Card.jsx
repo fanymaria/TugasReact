@@ -49,7 +49,7 @@ import formatToIDRCurrency from "../../utils/formatToIDRCurrency";
 
 export default function Card({ product }) {
     return (
-        <div className="flex flex-col max-w-[370px] flex-wrap p-[16px] bg-[#d3a27f]" >
+        <div className="flex flex-col max-w-[370px] flex-wrap p-[16px] bg-black">
             <img src={product.imageUrl ?? ''} alt={product.name ?? 'No name'} className="block max-h-[300px] mb-4 object-cover" />
             <div className="flex flex-col gap-2">
                 <h4 className="font-medium text-[20px] text-white">{product.name ?? 'No Name'}</h4>
@@ -60,18 +60,24 @@ export default function Card({ product }) {
                         <p className="text-xl font-semibold text-center text-red-500">Out of Stock</p>
                     ) : (product.stock <= 25 && product.stock !== 0) ? (
                         <>
-                            <p className="text-l font-semibold text-right text-brown-500">Almost Sold Out</p>
-                            <Button type="button" className="inline-flex items-center justify-center gap-2 p-4 bg-[#964b00] text-center hover:bg-[#c08457] text-white active:bg-[#c08457]">
-                                <FontAwesomeIcon icon={faCartShopping} className="mb-0" />
-                                <span>Add to cart</span>
-                            </Button>
-                        </>
-
-                    ) : (
-                        <Button type="button" className="inline-flex items-center justify-center gap-2 p-4 bg-[#964b00] text-center hover:bg-[#c08457] text-white active:bg-[#c08457]">
+                        <p className="text-l font-semibold text-right text-red-500">Almost Sold Out</p>
+                        <Button 
+                            type="button" 
+                            className="inline-flex items-center justify-center gap-2 p-4 bg-gray-800 text-center hover:bg-gray-700 text-white active:bg-gray-600"
+                        >
                             <FontAwesomeIcon icon={faCartShopping} className="mb-0" />
                             <span>Add to cart</span>
                         </Button>
+                    </>
+                    ) : (
+                        <Button 
+                        type="button" 
+                        className="inline-flex items-center justify-center gap-2 p-4 bg-gray-800 text-center hover:bg-gray-700 text-white active:bg-gray-600"
+                      >
+                        <FontAwesomeIcon icon={faCartShopping} className="mb-0" />
+                        <span>Add to cart</span>
+                      </Button>
+                      
                     )}
                 </div>
             </div>
